@@ -15,15 +15,17 @@ public class Income extends Transaction
     
     @Override
     public void displayDetails() 
-    {
-        System.out.println("----Income Details----");
+    {   
+        System.out.println("\n-------------------------------------" +
+            "\n             Income Details" +
+            "\n-------------------------------------"
+        );
         System.out.println("UserId: " + id +
             "\nDate: " + date +
-            "\nIncome: " + sourceOfIncome + "-" + amount +
+            "\nIncome: " + sourceOfIncome + " - " + amount + "PHP" +
             "\n-------------------------------------" +
             "\nDescription: " + description +
             "\n-------------------------------------"
         );
     }
-    
 }

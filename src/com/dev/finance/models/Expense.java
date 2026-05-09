@@ -16,13 +16,16 @@ public class Expense extends Transaction
     @Override
     public void displayDetails() 
     {
-        System.out.println("----Expense Details----");
+        System.out.println("\n-------------------------------------" +
+            "\n             Expense Details" +
+            "\n-------------------------------------"
+        );
         System.out.println("UserId: " + id +
             "\nDate: " + date +
-            "\nIncome: " + expenseType + "-" + amount +
+            "\nIncome: " + expenseType + " - " + amount + "PHP" +
             "\n-------------------------------------" +
             "\nDescription: " + description +
             "\n-------------------------------------"
         );
-    } 
+    }
 }

@@ -19,9 +19,21 @@ public class Main
             "Add Income", 
             "Add Expense", 
             "View Current Balance", 
-            "View Current Transaction History",
+            "View Transaction History",
             "Exit"
         };
+
+
+        System.out.println("=============================================================================");
+        System.out.println("  ______ _                              _______             _             ");
+        System.out.println(" |  ____(_)                            |__   __|           | |            ");
+        System.out.println(" | |__   _ _ __   __ _ _ __   ___ ___     | |_ __ __ _  ___| | _____ _ __ ");
+        System.out.println(" |  __| | | '_ \\ / _` | '_ \\ / __/ _ \\    | | '__/ _` |/ __| |/ / _ \\ '__|");
+        System.out.println(" | |    | | | | | (_| | | | | (__|  __/    | | | | (_| | (__|   <  __/ |   ");
+        System.out.println(" |_|    |_|_| |_|\\__,_|_| |_|\\___\\___|    |_|_|  \\__,_|\\___|_|\\_\\___|_|   ");
+        System.out.println("                                                                           ");
+        System.out.println("   >>> A Personal Finance Tracker for your Java & OOP Portfolio [cite: 1] <<<");
+        System.out.println("=============================================================================");
 
         while(true)
         {
@@ -36,6 +48,8 @@ public class Main
             {
                 System.out.print("Choose an option: ");
                 choice = scanner.nextInt();
+                System.out.println("=============================================================================");
+
             } 
             catch (Exception e) 
             {
@@ -48,7 +62,7 @@ public class Main
             switch (choice) 
             {
                 case 1:
-                    System.out.println("----Adding Income----");
+                    System.out.println("\n----Adding Income----");
 
                     // for random id generated per transaction
                     int incomeID = (int) (Math.random() * 1000);
@@ -76,10 +90,13 @@ public class Main
                     // passing the object to the main-FinanceManage that is stored in a arraylist
                     manager.addTransactions(newIncome);
 
+                    // for line formatting
+                    System.out.println();
+
                     break;
                 
                 case 2:
-                    System.out.println("----Subtracting Expense----");
+                    System.out.println("\n----Subtracting Expense----");
 
                     // for random id generated per transaction
                     int expenseID = (int) (Math.random() * 1000);
@@ -107,22 +124,25 @@ public class Main
                     // passing the object to the main-FinanceManage that is stored in a arraylist
                     manager.addTransactions(newExpense);
 
+                    // for line formatiing
+                    System.out.println();
+
                     break;
 
                 case 3:
 
                     //viewing the current balance
-                    System.out.println("----View Current Balance----");
+                    System.out.println("\n-------Current Balance-------");
                     System.out.println("------------------------------");
-                    System.out.println("Current Cash Balance: " + manager.calculateBalance());
-                    System.out.println("------------------------------");
+                    System.out.println("Current Cash Balance: " + manager.calculateBalance() + "PHP");
+                    System.out.println("------------------------------\n");
 
                     break;
                 
                 case 4:
 
                     // viewing the transaction history
-                    System.out.println("----View Current Transaction History----");
+                    System.out.println("\n----Transaction History----");
 
                     System.out.print("Want to filter out by category or show all the trasaction history (y/n)? ");
                     char option = scanner.next().charAt(0);
@@ -139,6 +159,9 @@ public class Main
                     else
                     {
                         manager.viewHistory();
+
+                        // for fomatting
+                        System.out.println();
                     }
 
                     break;
@@ -146,7 +169,7 @@ public class Main
                 case 5:
 
                     // exiting the system 
-                    System.out.println("Thank you for using Finance Tracker. Goodbye...");
+                    System.out.println("\nThank you for using Finance Tracker. Goodbye...");
                     System.exit(0);
 
                 default:
