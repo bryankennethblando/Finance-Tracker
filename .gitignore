@@ -1,5 +1,5 @@
 # Ignore all compiled Java files
-bin/com/dev/finance*.class
+bin/*.class
 
 # Ignore the data folder content (if you want to keep your personal transactions private)
 data/*.csv
