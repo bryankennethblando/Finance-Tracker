@@ -11,6 +11,7 @@
                                                                            
    >>> A Personal Finance Tracker for your Java & OOP Portfolio <<<
 =============================================================================
+```
 
 A robust, Object-Oriented command-line application built in Java to track personal income and expenses. This project demonstrates core software engineering principles, including data persistence and clean architecture.
 
@@ -67,16 +68,19 @@ src/com/dev/finance/
  - Java Development Kit (JDK) 25 or higher.
 
  **1. Clone the Repository**
- ```git clone [https://github.com/bryankennethblando/Finance-Tracker.git](https://github.com/bryankennethblando/Finance-Tracker.git)
+ ```text
+ git clone [https://github.com/bryankennethblando/Finance-Tracker.git](https://github.com/bryankennethblando/Finance-Tracker.git)
  cd Finance-Tracker
  ```
 
  **2. Compile the Project**
- ```javac -d bin src/com/dev/finance/models/*.java src/com/dev/finance/logic/*.java
+ ```text
+ javac -d bin src/com/dev/finance/models/*.java src/com/dev/finance/logic/*.java
  ```
 
  **3. Run the Application**
- ```java -cp bin com.dev.finance.logic.Main
+ ```text
+ java -cp bin com.dev.finance.logic.Main
  ```
 
 ## Sample Output
