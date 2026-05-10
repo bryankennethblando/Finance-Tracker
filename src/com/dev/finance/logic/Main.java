@@ -12,6 +12,11 @@ public class Main
 
         // the object and varibles that will be used
         FinanceManager manager = new FinanceManager();
+
+        // for loading the previous data
+        manager.loadTransactionData();
+
+        // for option choice
         int choice = 0;
 
         // for menus
@@ -170,6 +175,10 @@ public class Main
 
                     // exiting the system 
                     System.out.println("\nThank you for using Finance Tracker. Goodbye...");
+
+                    // to save the trasaction into a csv file
+                    manager.saveTransactionData();
+                    
                     System.exit(0);
 
                 default:
