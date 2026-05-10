@@ -2,7 +2,7 @@ package com.dev.finance.models;
 
 public class Expense extends Transaction
 {
-    private String expenseType;
+    protected String expenseType;
  
     public Expense(int id, double amount, String date, String description, String expenseType)
     {

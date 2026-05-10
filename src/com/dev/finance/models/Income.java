@@ -2,7 +2,7 @@ package com.dev.finance.models;
 
 public class Income extends Transaction
 {
-    private String sourceOfIncome;
+    protected String sourceOfIncome;
  
     public Income(int id, double amount, String date, String description, String sourceOfIncome)
     {
